@@ -1,5 +1,3 @@
-import Footer from "@/component/layout/footer";
-import Header from "@/component/layout/header";
 import Tools from "@/component/tool/root/card";
 import toolData from "@/constant/tool";
 import React from "react";
@@ -32,7 +30,6 @@ const Tool = () => {
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 };

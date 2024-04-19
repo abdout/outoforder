@@ -1,15 +1,13 @@
 
 import Footer from "@/component/layout/footer";
-import Header from "@/component/layout/header";
+import Image from "next/image";
 
 import React from "react";
 
 const Club = () => {
   return (
     <div>
-      <Header />
-      
-      <p>ادخلوا من ابواب متفرقة</p>
+      <Image className="pb-6" src='/club.png' width={200} height={200} alt='Pen' />
       <Footer />
     </div>
   );
