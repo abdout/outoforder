@@ -1,16 +1,18 @@
 
 import Footer from "@/component/layout/footer";
 import Header from "@/component/layout/header";
+
 import React from "react";
 
-const Community = () => {
+const Club = () => {
   return (
-    <div className="space-y-4">
+    <div>
       <Header />
-      <Footer />
       
+      <p>ادخلوا من ابواب متفرقة</p>
+      <Footer />
     </div>
   );
 };
 
-export default Community;
+export default Club;

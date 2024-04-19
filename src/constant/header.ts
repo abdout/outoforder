@@ -1,7 +1,6 @@
-
-export const resrc = [
-    { href: `/team`, label: "Team" },
-    { href: `/kit`, label: "Kit" },
-    { href: `/car`, label: "Car" },
-    { href: `/more`, label: "More" },
+export const home = [
+    { href: "/", key: "blog", label: "Home" },
+    { href: "/tool", key: "tool", label: "Tool" },
+    { href: "/club", key: "club", label: "Club" },
+    { href: "/community", key: "community ", label: "Community" },
   ];
