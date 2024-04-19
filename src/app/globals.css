@@ -26,6 +26,31 @@ h2 {
   font-weight: 500;
 }
 
+@keyframes flow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-flow {
+  display: flex;
+  width: 200%; /* Adjust according to your needs */
+  animation: flow 20s linear infinite;
+}
+
+.animate-flow:hover {
+  animation-play-state: paused;
+}
+
+.icon-set {
+  display: flex;
+  width: 50%; /* Adjust according to your needs */
+  justify-content: space-between;
+}
+
 h3 {
   font-size: 19px;
   letter-spacing: 1px;
