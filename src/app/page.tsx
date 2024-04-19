@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "@/component/home/hero";
 import ReadMore from "@/component/home/readmore";
-import Sponser from "@/component/home/sponser";
+import Sponser from "@/component/home/sponsor";
 import Team from "@/component/home/team";
 import Contributor from "@/component/home/contributor";
 import MdIcon from "@/component/atom/icon/md";
@@ -17,6 +17,8 @@ export default function Home() {
       <Hero />
       <Service />
       <Client />
+      <Contributor />
+      <Sponser />
     </div>
 
   );

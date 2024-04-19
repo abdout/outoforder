@@ -1,14 +1,14 @@
 import React from "react";
 import LgIcon from "../atom/icon/lg";
-import { contributor } from "@/constant/home";
+import { sponsor } from "@/constant/home";
 
-const Contributor = () => {
+const Sponsor = () => {
   return (
     <div>
-      <h1 className="pl-8 py-8">Contributor</h1>
+      <h1 className="pl-8 py-8">Sponser</h1>
       <div className="flex flex-col justify-center items-center gap-4">
         <div className="flex gap-6 flex-wrap">
-          {contributor.map((icon, index) => (
+          {sponsor.map((icon, index) => (
             <div key={index} className="w-[65px] h-[65px] rounded-full overflow-hidden">
               <div className="flex justify-center items-center h-full gap-4">
                 <div style={{ borderRadius: '50%' }}>
@@ -23,4 +23,4 @@ const Contributor = () => {
   );
 };
 
-export default Contributor;
+export default Sponsor;
