@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 const Footer = () => {
   return (
 
-    <div className="-mx-24">
+    <div className="-mx-24 mt-14">
       <div className="flex flex-col w-full h-[p7rem] px-[p20px] pt-5 bg-black  items-center text-right p-4">
         <p className='text-white pt-4 opacity-85 hover:opacity-p00 transition-opacity duration-200'>
           <strong>Databayt</strong> - An open source, publicly traded entity that aim to be the go-to destination for businesses seeking automation solutions.
