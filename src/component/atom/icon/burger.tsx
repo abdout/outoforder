@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
-import Side from "../bar/side";
+
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const Burger = () => {
             transition={{ duration: 0.2 }}
             className="fixed item-center -mt-6 h-screen right-[130px] left-[-24px] top-[-24px] pt-12 pl-4 shadow-4xl bg-[#FCFCFC]"
           >
-            <Side />
+           
           </motion.div>
         )}
       </AnimatePresence>
