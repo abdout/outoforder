@@ -1,7 +1,7 @@
 import MdIcon from '@/component/atom/icon/md'
 import React from 'react'
 
-const Contrbuite = () => {
+const Contribute = () => {
   return (
     <div className='flex flex-col space-y-2 items-center justify-center'>
         <p className="text-[16px] font-light tracking-wider pb-4">
@@ -35,4 +35,4 @@ const Contrbuite = () => {
   )
 }
 
-export default Contrbuite
+export default Contribute
