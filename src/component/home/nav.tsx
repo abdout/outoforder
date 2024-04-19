@@ -36,7 +36,7 @@ const Nav = (props: { links: { href: string; label: string; }[] }) => {
       <div className=" flex gap-10">
         <Image
           className="hidden md:flex"
-          src="/search.png"
+          src="/home/search.png"
           alt=""
           width={18}
           height={12}

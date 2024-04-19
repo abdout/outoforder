@@ -18,8 +18,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="fflex flex-col items-center justify-center hidden md:flex rounded-full w-[16rem] h-[16rem] bg-black">
-            <Image src="/pencil.png" alt="Pencil" width={180} height={40} className="filter text-red-500"/>
-            <Image src="/memory.png" alt="Memory" width={180} height={40}/>
+            <Image src="/home/pencil.png" alt="Pencil" width={180} height={40} className="filter text-red-500"/>
+            <Image src="/home/memory.png" alt="Memory" width={180} height={40}/>
           </div>
         </div>
       </div>
