@@ -6,7 +6,7 @@ import React from 'react'
 const Sera = () => {
   return (
     <div>
-      <XlIcon src='/profile.png' alt='me'/>
+      <XlIcon src='/profile.png' alt='me' path=''/>
       <h1>Osman Abdout</h1>
       <p>Embedded Engineer at Tesla</p>
       <p>Sudan, Portsudan</p>
