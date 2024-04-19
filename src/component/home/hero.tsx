@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import MdButton from "../atom/button/md";
 import Image from "next/image";
+import Lottie from 'lottie-react';
+import animationData from '../../animation/hero.json';
 
 const Hero = () => {
   return (
@@ -24,9 +27,12 @@ const Hero = () => {
               <MdButton placeholder="Get started" />
             </div>
           </div>
-          <div className="flex-col items-center justify-center hidden md:flex rounded-full w-[16rem] h-[16rem] bg-black">
-            <Image src="/home/pencil.png" alt="Pencil" width={180} height={40} />
-            <Image src="/home/memory.png" alt="Memory" width={180} height={40} />
+          <div className="flex-col items-center justify-center hidden md:flex rounded-full w-[16rem] h-[16rem] bg-black relative">
+            <Lottie animationData={animationData} style={{ width: 320, height: 320 }} />
+            <div className="absolute">
+              <Image src="/home/pencil.png" alt="Pencil" width={180} height={40} />
+              <Image src="/home/memory.png" alt="Memory" width={180} height={40} />
+            </div>
           </div>
         </div>
       </div>
