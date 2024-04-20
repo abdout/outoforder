@@ -9,8 +9,8 @@ const LgIcon = (props: {
   return (
         <Image
           src={props.src}
-          width={80}
-          height={80}
+          width={90}
+          height={90}
           alt={props.alt}
           className="transition-opacity duration-200 hover:opacity-100 opacity-80"
         />

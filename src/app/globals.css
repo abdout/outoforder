@@ -111,8 +111,8 @@ strong {
 }
 
 .word-animation span {
-  animation: letter-animation 4s infinite;
-  animation-delay: calc(0.09s * var(--i));
+  animation: letter-animation 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .word-animation span:nth-child(1) { --i: 1; }

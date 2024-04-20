@@ -38,13 +38,13 @@ const Footer = () => {
         </p>
 
         <div className='flex items-center justify-center gap-6 fill-current pt-8'>
-          <Icon icon={"akar-icons:github-fill"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"pajamas:discord"} height="55" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"bi:linkedin"} height="45" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"formkit:youtube"} height="53" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"bi:facebook"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"cib:messenger"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
-          <Icon icon={"akar-icons:twitter-fill"} height="53" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"akar-icons:github-fill"} height="45" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"pajamas:discord"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"bi:linkedin"} height="40" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"formkit:youtube"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"bi:facebook"} height="45" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"cib:messenger"} height="45" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
+          <Icon icon={"akar-icons:twitter-fill"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
         </div>
 
         <p className='flex text-white items-center space-x-8 pt-8 pb-4 opacity-85 hover:opacity-100 transition-opacity duration-200 '>

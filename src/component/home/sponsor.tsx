@@ -6,7 +6,7 @@ const Sponsor = () => {
   return (
     <div>
       <h1 className="pl-8 py-8">Sponser</h1>
-      <div className="flex flex-col justify-center items-center gap-4">
+      <div className="pl-8 flex flex-col justify-center items-center gap-4">
         <div className="flex gap-6 flex-wrap">
           {sponsor.map((icon, index) => (
             <div key={index} className="w-[65px] h-[65px] rounded-full overflow-hidden">

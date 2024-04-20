@@ -8,11 +8,11 @@ import animationData from '../../animation/hero.json';
 const Hero = () => {
   return (
     <div className="-mx-24">
-      <div className="md:justify-start md:items-start w-full h-[17rem] md:h-[22rem] px-[120px] pt-10 bg-[#F1F1F1] items-center">
-        <div className="md:flex md:justify-center md:items-center md:grid-2 md:gap-40">
+      <div className="md:justify-start md:items-start w-full h-[18rem] md:h-[23rem] px-[120px] pt-10 bg-[#F1F1F1] items-center">
+        <div className="md:flex md:justify-center md:items-center md:grid-2 md:gap-60">
           <div>
             <p className="text-[24px] pl-1 pb-2 font-light">business automation</p>
-            <h1 className="word-animation font-rubik md:text[120px] font-medium text-7xl pb-4">
+            <h1 className="word-animation font-rubik md:text[120px] font-medium text-7xl">
               <span>D</span>
               <span>a</span>
               <span>t</span>
@@ -22,8 +22,8 @@ const Hero = () => {
               <span>y</span>
               <span>t</span>
             </h1>
-            <p className="text-[20px] leading-[28px]"><strong>Automate</strong> the Boring, Elevate the Extraordinary. <br /> Bye bye to mundane tasks, hello to streamlined success.</p>
-            <div className="pr-[70px] pt-6 ">
+            <p className="text-[28px] tracking-wider pt-2 leading-[38px]"><strong>Automate</strong> the Boring, <br /> Elevate the Extraordinary.</p>
+            <div className="pr-[70px] pt-10 ">
               <MdButton placeholder="Get started" />
             </div>
           </div>
