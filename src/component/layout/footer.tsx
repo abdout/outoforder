@@ -47,10 +47,10 @@ const Footer = () => {
           <Icon icon={"akar-icons:twitter-fill"} height="50" color="white" className="opacity-85 hover:opacity-100 transition-opacity duration-200 cursor-pointer" />
         </div>
 
-        <p className='flex text-white items-center space-x-8 pt-8 pb-4 opacity-85 hover:opacity-100 transition-opacity duration-200 '>
-          Databayt
+        <p className='flex text-white items-center pt-8 pb-4 opacity-85 hover:opacity-100 transition-opacity duration-200 '>
+          Databayt <strong className='text-black'>.</strong> 
           <Icon icon={"ph:copyright-light"} height="20" color="white" />
-          all rights free
+          <strong className='text-black'>.</strong> all rights free 
         </p>
       </div>
     </div>
