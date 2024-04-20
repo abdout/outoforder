@@ -22,8 +22,8 @@ const Hero = () => {
               <span>y</span>
               <span>t</span>
             </h1>
-            <p className="text-[28px] tracking-wider pt-2 leading-[38px]"><strong>Automate</strong> the Boring, <br /> Elevate the Extraordinary.</p>
-            <div className="pr-[70px] pt-10 ">
+            <p className="text-[28px] tracking-wider pt-2 pl-1 leading-[38px]"><strong>Automate</strong> the Boring, <br /> Elevate the Extraordinary.</p>
+            <div className="pr-[70px] pt-8 pl-1">
               <MdButton placeholder="Get started" />
             </div>
           </div>
