@@ -14,7 +14,7 @@ const icons = [
 const Client = () => {
   return (
     <div className='flex flex-col space-y-2 py-12'>
-        <p className='px-8 text-xl'>deliver top-notch <strong>automation</strong> solutions to </p>
+        <p className='px-8 text-2xl'>our <strong>automation</strong> shiped to </p>
         <div className='flex items-center justify-center gap-20 pt-4 overflow-hidden'>
             <div className="animate-flow space-x-20 flex-nowrap flex items-center">
                 {[...icons, ...icons].map((icon, index) => (

@@ -5,7 +5,7 @@ import { sponsor } from "@/constant/home";
 const Sponsor = () => {
   return (
     <div>
-      <h1 className="pl-8 py-8">Sponser</h1>
+      <h1 className="pl-8 py-8 text-2xl">Sponser</h1>
       <div className="pl-8 flex flex-col justify-center items-center gap-4">
         <div className="flex gap-6 flex-wrap">
           {sponsor.map((icon, index) => (

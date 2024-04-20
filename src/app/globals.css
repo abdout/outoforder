@@ -42,7 +42,7 @@ h2 {
 .animate-flow {
   display: flex;
   width: 200%; /* Adjust according to your needs */
-  animation: flow 20s linear infinite;
+  animation: flow 30s linear infinite;
 }
 
 .animate-flow:hover {

@@ -10,8 +10,8 @@ const Nav = (props: { links: { href: string; label: string; }[] }) => {
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-4 items-center justify-center ">
-      <nav className="hidden md:flex justify-between w-full">
+    <div className="flex gap-4 p-2 mb-4 items-center justify-center ">
+      
         <ul className="flex space-x-8">
           {props.links.map((link) => (
             <li
@@ -32,17 +32,19 @@ const Nav = (props: { links: { href: string; label: string; }[] }) => {
             </li>
           ))}
         </ul>
-      </nav>
-      <div className=" flex gap-10">
-        <Image
-          className="hidden md:flex"
+  
+      <div className="">
+      <Image
+          className="hidden md:flex ml-6"
           src="/home/search.png"
           alt=""
           width={18}
           height={12}
         />
-        <Burger />
       </div>
+        
+        <Burger />
+      
     </div>
   );
 };

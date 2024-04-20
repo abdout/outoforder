@@ -12,7 +12,7 @@ const LgIcon = (props: {
           width={90}
           height={90}
           alt={props.alt}
-          className="transition-opacity duration-200 hover:opacity-100 opacity-80"
+          className="transition-opacity duration-200 hover:opacity-100 opacity-60"
         />
   );
 };

@@ -5,7 +5,7 @@ import { contributor } from "@/constant/home";
 const Contributor = () => {
   return (
     <div>
-      <h1 className="pl-8 py-8">Contributor</h1>
+      <h1 className="pl-8 py-8 text-2xl">Contributor</h1>
       <div className="pl-8 flex flex-col justify-center items-center gap-4">
         <div className="flex gap-6 flex-wrap">
           {contributor.map((icon, index) => (

@@ -9,7 +9,7 @@ const Burger = () => {
 
   return (
     <div className="">
-      <div className="absolute top-[-0.15rem] right-[-0.8rem] z-10">
+      <div className="absolute top-[1.1rem] right-[21rem] z-50">
         <Hamburger size={20} distance="lg" toggled={open} toggle={setOpen} />
       </div>
 
@@ -20,7 +20,7 @@ const Burger = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed item-center h-screen left-[140px] md:left-[900px] right-0 top-[-24px] pt-20 shadow-4xl bg-[#FCFCFC]"
+            className="fixed item-center h-screen left-[140px] md:left-[700px] right-0 top-[-24px] pt-20 shadow-4xl bg-[#FCFCFC] z-40"
           >
             <ul className="grid gap-2">
               {homeNav.map((route, idx) => {
@@ -42,7 +42,7 @@ const Burger = () => {
                     <a
                       onClick={() => setOpen((prev) => !prev)}
                       className={
-                        "flex items-center justify-between w-full px-8 p-2 "
+                        "flex items-center justify-between w-full px-28 p-2 "
                       }
                       href={route.path}
                     >
