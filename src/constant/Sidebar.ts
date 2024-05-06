@@ -1,105 +1,68 @@
-import React from "react";
-
-interface SidebarItem {
-  title: string;
-  path: string;
-  subNav?: SidebarItem[];
-}
-
-export const SidebarData: SidebarItem[] = [
-
+export const sidebar = [
   {
-    title: "Relay",
-    path: "#",
-
-    subNav: [
-      {
-        title: "Protection",
-        path: "/tool/fix/test/docs/relay/prot",
-      },
-      {
-        title: "Lockout",
-        path: "/tool/fix/test/docs/relay/lock",
-      },
-      {
-        title: "Differential",
-        path: "/tool/fix/test/docs/relay/diff",
-      },
-    ],
+    title: "ورقة",
+    path: "/docs",
+    icon: "ph:book-thin",
   },
   {
-    title: "Switchgear",
-    path: "#",
+    title: "فريق",
+    path: "/team",
+    icon: "fluent:person-20-regular",
+  },
+  {
+    title: "مشروع",
+    path: "/project",
+    icon: "ph:folder-simple-thin",
+  },
+  {
+    title: "مهمة",
+    path: "/task",
+    icon: "fluent:shield-task-20-regular",
+  },
+  {
+    title: "تقرير",
+    path: "/daily",
+    icon: "ph:file-thin",
+  },
+  // {
+  //   title: "Team",
+  //   path: "/team",
+  //   icon: "fluent:person-20-regular",
+  // },
+  {
+    title: "مال",
+    path: "/wallet",
+    icon: "circum:wallet",
+    children: ["/car", "/kit", "/more"],
+  },
+  // {
+  //   title: "Car",
+  //   path: "/car",
+  //   icon: "material-symbols-light:swap-driving-apps-wheel-outline-sharp",
+  // },
+  // {
+  //   title: "Invoice",
+  //   path: "/invoice",
+  //   icon: "iconamoon:invoice-thin",
+  // },
+  // { title: "Wallet", path: "/wallet", icon: "circum:wallet" },
+  // { title: "Timesheet", path: "/timesheet", icon: "ph:timer-thin" },
+  // {
+  //   title: "Notification",
+  //   path: "/notification",
+  //   icon: "ph:notification-thin",
+  // },
+];
 
-    subNav: [
-      {
-        title: "Circuit breaker",
-        path: "/tool/fix/test/docs/trafo",
-      },
-      {
-        title: "Prot. relay",
-        path: "/overview/revenue",
-      },
-    ],
+export const bottomItem = [
+  {
+    title: "Setting",
+    path: "/setting",
+    icon: "circum:settings",
   },
   {
-    title: "Transformer",
-    path: "#",
-
-    subNav: [
-      {
-        title: "Reports",
-        path: "/reports/reports1",
-      },
-      {
-        title: "Reports",
-        path: "/reports/reports1",
-      },
-      {
-        title: "Reports 2",
-        path: "/reports/reports2",
-      },
-      {
-        title: "Reports 3",
-        path: "/reports/reports3",
-      },
-    ],
-  },
-  {
-    title: "Cable",
-    path: "#",
-    subNav: [
-      {
-        title: "Hi-Pot",
-        path: "/reports/reports1",
-      },
-      {
-        title: "Partial discharge",
-        path: "/reports/reports1",
-      },
-    ],
-  },
-  {
-    title: "RMU",
-    path: "#",
-  },
-  {
-    title: "Battery",
-    path: "#",
-
-    subNav: [
-      {
-        title: "Message 1",
-        path: "#",
-      },
-      {
-        title: "Message 2",
-        path: "/messages/message2",
-      },
-    ],
-  },
-  {
-    title: "Capacitor",
-    path: "#",
+    title: "Community",
+    path: "/community",
+    icon: "ph:circle-thin",
   },
 ];

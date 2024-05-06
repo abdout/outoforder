@@ -2,10 +2,9 @@ import React from "react";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter, Rubik } from "next/font/google";
-import Header from "@/component/layout/header";
 import Footer from "@/component/layout/footer";
 import { home } from "@/constant/header";
-import Nav from "@/component/home/nav";
+import Nav from "@/component/layout/header";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const rubik = Rubik({ subsets: ["latin"], variable: "--inter" });

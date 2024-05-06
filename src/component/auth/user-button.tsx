@@ -29,7 +29,7 @@ export const UserButton = () => {
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-[#fcfcfc] w-44 mt-2 z-50" align="end">
+      <DropdownMenuContent className="bg-[#fcfcfc] w-44 mt-2 z-50" align="start">
         <Link href="/profile">
 
           <DropdownMenuItem>

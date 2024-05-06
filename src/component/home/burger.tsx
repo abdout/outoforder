@@ -1,18 +1,23 @@
 "use client";
 import React, { useState } from "react";
-import { Squeeze as Hamburger } from "hamburger-react";
+import { Squash as Hamburger } from 'hamburger-react'
 import { AnimatePresence, motion } from "framer-motion";
-import homeNav from "@/constant/homeNav";
+import hamburger from "@/constant/hamburger";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="">
-      <div className="absolute top-[1.1rem] right-[21rem] z-50">
-        <Hamburger size={20} distance="lg" toggled={open} toggle={setOpen} />
+    <div className="" dir="rtl">
+     
+      <div className="group absolute top-[1.4rem] right-[19.5rem] z-50 opacity-50 hover:opacity-100">
+        <Hamburger size={22} distance="md" toggled={open} toggle={setOpen} />
+        <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-[-20px] text-lg hidden group-hover:block p-2">قائمة</div>
       </div>
-
+      
+   
       <AnimatePresence>
         {open && (
           <motion.div
@@ -20,10 +25,10 @@ const Burger = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed item-center h-screen left-[140px] md:left-[700px] right-0 top-[-24px] pt-20 shadow-4xl bg-[#FCFCFC] z-40"
+            className="fixed item-center h-screen left-[140px] md:left-[750px] right-0 top-[-24px] pt-20 shadow-4xl bg-[#FCFCFC] z-40"
           >
             <ul className="grid gap-2">
-              {homeNav.map((route, idx) => {
+              {hamburger.map((route, idx) => {
                 // const { Icon } = route;
 
                 return (
@@ -39,16 +44,17 @@ const Burger = () => {
                     key={route.title}
                     className="w-full p-[0.08rem]"
                   >
-                    <a
+                    <Link
                       onClick={() => setOpen((prev) => !prev)}
                       className={
-                        "flex items-center justify-between w-full px-28 p-2 "
+                        "flex items-center w-full gap-4 px-28 p-2 "
                       }
                       href={route.path}
                     >
+                      {route.icon && <Icon icon={route.icon} width={25} className="flex-shrink-0" />}
                       <span className="flex gap-1 text-lg">{route.title}</span>
-                      {/* <Icon className="text-xl" /> */}
-                    </a>
+                      
+                    </Link>
                   </motion.li>
                 );
               })}
