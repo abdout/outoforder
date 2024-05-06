@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const rubik = Rubik({ subsets: ["latin"], variable: "--inter" });
 
 export const metadata: Metadata = {
-  title: "Databayt",
-  description: "business automation",
+  title: "الحركة",
+  description: "الحركة الوطنية للبناء والتنمية",
 };
 
 export default function RootLayout({
