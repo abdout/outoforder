@@ -3,7 +3,7 @@ import React from "react";
 import MdButton from "../atom/button/md";
 import Image from "next/image";
 import Lottie from 'lottie-react';
-import animationData from '../../animation/slow.json';
+import animationData from '../../../public/animation/slow.json';
 import Brand from "../atom/text/brand";
 
 const Hero = () => {

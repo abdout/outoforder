@@ -4,11 +4,16 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 interface TeamMember {
+  task: string;
+  project: string;  
+  status: string;
+  color: string;
+  time: string;
   image: string;
-  name: string;
-  rank: string;
-  location: string;
-  interest: string;
+  // name: string;
+  // rank: string;
+  // location: string;
+  // interest: string;
 }
 
 const TeamList: React.FC = () => {
@@ -91,7 +96,7 @@ const TeamList: React.FC = () => {
            <div className="mx-1">
              <Image
                className="rounded-full border " 
-               src={member.image} alt={member.name} width={35} height={35} />
+               src={member.image} alt="" width={35} height={35} />
            </div>
            
          </td>

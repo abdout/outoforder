@@ -7,7 +7,7 @@ export const publicRoutes = [
   "/",
   "/verification",
   "/readme",
-  "/"
+  
 ];
 
 /**
