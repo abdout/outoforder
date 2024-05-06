@@ -1,7 +1,7 @@
 // Item.tsx
 "use client";
 
-import { sidebar } from "@/constant/sidebar";
+import { item } from "@/constant/sidebar";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,7 +12,7 @@ const Item = () => {
 
   return (
     <div>
-      {sidebar.map((item, index) => (
+      {item.map((item, index) => (
         <Link key={index} href={item.path}>
           <div className={`flex space-x-3 gap-4 items-center pr-4 p-2 group ${pathname.startsWith(item.path) ? "bg-black text-white " : " hover:bg-gray-200"
             }`}>
