@@ -24,16 +24,11 @@ export const sidebar = [
     path: "/daily",
     icon: "ph:file-thin",
   },
-  // {
-  //   title: "Team",
-  //   path: "/team",
-  //   icon: "fluent:person-20-regular",
-  // },
   {
     title: "مال",
     path: "/wallet",
     icon: "circum:wallet",
-    children: ["/car", "/kit", "/more"],
+    
   },
   // {
   //   title: "Car",
