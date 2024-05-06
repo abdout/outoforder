@@ -10,8 +10,8 @@ const rubik = Rubik({ subsets: ["latin"], variable: "--rubik" });
 const vazirmatn = Vazirmatn({ subsets: ["latin"], variable: "--Vazirmatn" });
 
 export const metadata: Metadata = {
-  title: "Databayt",
-  description: "business automation",
+  title: "الحركة",
+  description: "الحركة الوطنية للبناء والتنمية",
 };
 
 export default async function RootLayout({
