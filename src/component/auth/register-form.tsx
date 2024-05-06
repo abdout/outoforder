@@ -49,7 +49,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen" dir="ltr">
     <CardWrapper
       headerLabel="القلم أقوى من الذاكرة"
       backButtonLabel="Already have an account?"
