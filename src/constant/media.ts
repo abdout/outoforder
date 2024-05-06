@@ -2,7 +2,7 @@ export const media = [
   {
     lineone: "أهمية المشروع الثقافي",
     linetwo: "وضرورة أسبقيته للمسألة السياسية",
-    image: "/home/media/media1.png",
+    image: "/media/media1.png",
     author: "هشام احمد ",
     date: "18 ابريل 2024",
     videoId: "ybE4VaA5pqg",
@@ -13,7 +13,7 @@ export const media = [
   {
     lineone: "عن أهمية",
     linetwo: "الميثاق الاجتماعي",
-    image: "/home/media/media2.png",
+    image: "/media/media2.png",
     author: "المقداد الهجان",
     date: "14 ابريل 2024",
     videoId: "mlgqdU_O6Ek",
@@ -23,7 +23,7 @@ export const media = [
   {
     lineone: "الرؤية الاقتصادية",
     linetwo: "والتنموية للحركة الوطنية",
-    image: "/home/media/media3.png",
+    image: "/media/media3.png",
     author: "قاسم الظافر",
     date: "14 ابريل 2024",
     videoId: "yjSIrCLQL9U",

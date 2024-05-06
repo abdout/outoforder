@@ -1,6 +1,3 @@
-
-import Footer from "@/component/layout/footer";
-
 import React from "react";
 
 const Community = () => {
