@@ -22,7 +22,7 @@ const TeamList: React.FC = () => {
       {
         task: "عناوين الناظر ترك ",
         project: "الميثاق الاجتماعي ",
-        image: "/home/media/hesham.png",
+        image: "/media/hesham.png",
         status: "انتهي",
         color: "bg-green-600",
         time: "يومين ",
@@ -30,7 +30,7 @@ const TeamList: React.FC = () => {
       {
         task: "مواعيد الناظر ترك ",
         project: "الميثاق الاجتماعي ",
-        image: "/home/media/hesham.png",
+        image: "/media/hesham.png",
         status: "انتهي",
         color: "bg-green-600",
         time: "يومين ",
@@ -38,7 +38,7 @@ const TeamList: React.FC = () => {
       {
         task: "دراسة بودكاست ثمانية",
         project: "بودكاست مجتمع ",
-        image: "/home/media/hesham.png",
+        image: "/media/hesham.png",
         status: "انتهي",
         color: "bg-yellow-400",
         time: "يومين ",
@@ -46,7 +46,7 @@ const TeamList: React.FC = () => {
       {
         task: "  انشاء القطاع التقني  ",
         project: "أتمتة الحركة",
-        image: "/home/media/hesham.png",
+        image: "/media/hesham.png",
         status: "انتهي",
         color: "bg-red-600",
         time: "يومين ",
