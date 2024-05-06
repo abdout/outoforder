@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Inter } from "next/font/google";
 import "./../globals.css";
-import Side from "../../component/platform/layout/sidebar";
+import Sidebar from "../../component/platform/layout/sidebar";
 import { usePathname } from "next/navigation";
 import Header from '../../component/platform/layout/header';
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             onMouseLeave={() => setHovered(false)}
             className="fixed right-0 top-[47px] h-screen"
           >
-            <Side />
+            <Sidebar />
           </div>
           <div className='flex  flex-col '>
             
