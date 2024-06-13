@@ -1,36 +1,60 @@
-import React from "react";
+'use client';
+// import type { Metadata } from "next";
+import { Rubik } from "next/font/google";
 import "./globals.css";
-import type { Metadata } from "next";
-import { Inter, Rubik, Vazirmatn} from "next/font/google";
-import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
+import Header from "@/components/root/header/ui";
+import Footer from "@/components/root/footer/ui";
+import { ModalProvider } from "@/components/modal/context";
+import { ArticleProvider } from "@/components/root/article/context";
+import { UploadProvider } from "@/components/upload/context";
+import { ThemeProvider } from "@/components/theme/provider";
+import { usePathname } from "next/navigation";
 
-const inter = Inter({ subsets: ["latin"], variable: "--inter" });
-const rubik = Rubik({ subsets: ["latin"], variable: "--rubik" });
-const vazirmatn = Vazirmatn({ subsets: ["latin"], variable: "--Vazirmatn" });
+const rubik = Rubik({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "الحركة",
-  description: "الحركة الوطنية للبناء والتنمية",
-};
+// export const metadata: Metadata = {
+//   title: "الحركة الوطنية",
+//   description: "الحركة الوطنية للبناء والتنمية - المجتمع اولا",
+// };
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
 
-  const session = await auth();
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const NoLayout = ['/register','/member', '/error', '/password', '/verification', '/join', '/reset']
+  if (NoLayout.includes(pathname)) {
+    return (
+      <html lang="en">
+        <body className={rubik.className} dir="rtl">
+        <div className="container">
+          <div className="wrapper">
+          {children}
+          </div>
+        </div>
+        </body>
+      </html>
+    )
+  }
   return (
-    <SessionProvider session={session}>
     <html lang="en">
-      <body  className={`${inter.variable} ${rubik.variable} ${vazirmatn.variable}  overflow-x-hidden`} dir="rtl">
-        <div className="w-full " >
-          {children}  
+      <body className={rubik.className} dir="rtl">
+        <div className="container">
+          <div className="wrapper">
+            <Header />
+            <ModalProvider>
+              <ArticleProvider>
+                <UploadProvider>
+                  <ThemeProvider >
+                    {children}
+                  </ThemeProvider>
+                </UploadProvider>
+              </ArticleProvider>
+            </ModalProvider>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
-    </SessionProvider>
   );
 }
+

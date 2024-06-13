@@ -1,12 +1,9 @@
-"use client";
-import React from "react";
+import React from 'react'
 
-const Account = () => {
+const Wallet = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-4xl">مال</h1>
-    </div>
-  );
-};
+    <div>Wallet</div>
+  )
+}
 
-export default Account;
+export default Wallet
