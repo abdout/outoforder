@@ -7,7 +7,7 @@ import MemberContent from '@/components/platform/member/content';
 
 
 
-const page = () => {
+const Member = () => {
     
     const { members } = useMember();
 
@@ -20,4 +20,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Member;

@@ -1,7 +1,7 @@
-'use client'
-import { ColumnDef } from '@tanstack/react-table'
-import { MoreHorizontal, ArrowUpDown } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import React, { useEffect } from 'react';
+import { ColumnDef } from '@tanstack/react-table';
+import { MoreHorizontal } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,12 +9,41 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { Icon } from '@iconify/react';
-import { task } from '@/components/platform/task/type' // Assuming you have a task type
-import Link from 'next/link'
-import { useTask } from '@/components/platform/task/context' // Assuming you have a useTask hook
-import { useEffect } from 'react'
+} from '@/components/ui/dropdown-menu';
+import Link from 'next/link';
+import { useTask } from '@/components/platform/task/context'; // Assuming you have a useTask hook
+import { task } from '@/components/platform/task/type'; // Assuming you have a task type
+
+const ActionCell = ({ row }: { row: any }) => {
+  const task = row.original;
+  const { deleteTask } = useTask(); // Assuming you have deleteTask in useTask
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant='ghost' className='h-8 w-8 p-0'>
+          <span className='sr-only'>Open menu</span>
+          <MoreHorizontal className='h-4 w-4' />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align='end'>
+        <DropdownMenuLabel>الضبط</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          onClick={() => navigator.clipboard.writeText(task._id)}
+        >
+          نسخ 
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href={`/task/${task._id}`}>
+            ملف
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => task._id && deleteTask(task._id)}>حذف</DropdownMenuItem> 
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
 
 export const columns: ColumnDef<task>[] = [
   {
@@ -29,7 +58,7 @@ export const columns: ColumnDef<task>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
           المشروع
-          <ArrowUpDown className=' h-4 w-4' />
+          {/* <ArrowUpDown className=' h-4 w-4' /> */}
         </Button>
         </div>
       )
@@ -57,40 +86,6 @@ export const columns: ColumnDef<task>[] = [
   },
   {
     id: 'actions',
-    cell: ({ row }) => {
-      const task = row.original
-
-      const { refreshTasks, tasks, deleteTask } = useTask(); // Assuming you have refreshTasks, tasks, deleteTask in useTask
-      useEffect(() => {
-        refreshTasks();
-        console.log(tasks); // Add this line
-    }, []);
-
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant='ghost' className='h-8 w-8 p-0'>
-              <span className='sr-only'>Open menu</span>
-              <MoreHorizontal className='h-4 w-4' />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align='end'>
-            <DropdownMenuLabel>الضبط</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(task._id)}
-            >
-              نسخ 
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href={`/task/${task._id}`}>
-                ملف
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => task._id && deleteTask(task._id)}>حذف</DropdownMenuItem> 
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
-    }
-  }
-]
+    cell: (props) => <ActionCell {...props} />
+  },
+];
