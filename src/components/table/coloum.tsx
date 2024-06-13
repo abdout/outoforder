@@ -89,43 +89,43 @@ export const columns: ColumnDef<member>[] = [
       )},
   },
   
-  {
-    id: 'actions',
-    cell: ({ row }) => {
-      const user = row.original
+  // {
+  //   id: 'actions',
+  //   cell: ({ row }) => {
+  //     const user = row.original
 
-      const { refreshMembers, members, deleteMember } = useMember();
-      useEffect(() => {
-        refreshMembers();
-        console.log(members); // Add this line
-    }, []);
+  //     const { refreshMembers, members, deleteMember } = useMember();
+  //     useEffect(() => {
+  //       refreshMembers();
+  //       console.log(members); // Add this line
+  //   }, []);
 
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant='ghost' className='h-8 w-8 p-0'>
-              <span className='sr-only'>Open menu</span>
-              <MoreHorizontal className='h-4 w-4' />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align='end'>
-            <DropdownMenuLabel>الضبط</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(user._id)}
-            >
-              نسخ 
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href={`/member/${user._id}`}>
-                ملف
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>تجميد</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => user._id && deleteMember(user._id)}>حذف</DropdownMenuItem> 
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
-    }
-  }
+  //     return (
+  //       <DropdownMenu>
+  //         <DropdownMenuTrigger asChild>
+  //           <Button variant='ghost' className='h-8 w-8 p-0'>
+  //             <span className='sr-only'>Open menu</span>
+  //             <MoreHorizontal className='h-4 w-4' />
+  //           </Button>
+  //         </DropdownMenuTrigger>
+  //         <DropdownMenuContent align='end'>
+  //           <DropdownMenuLabel>الضبط</DropdownMenuLabel>
+  //           <DropdownMenuSeparator />
+  //           <DropdownMenuItem
+  //             onClick={() => navigator.clipboard.writeText(user._id)}
+  //           >
+  //             نسخ 
+  //           </DropdownMenuItem>
+  //           <DropdownMenuItem>
+  //             <Link href={`/member/${user._id}`}>
+  //               ملف
+  //             </Link>
+  //           </DropdownMenuItem>
+  //           <DropdownMenuItem>تجميد</DropdownMenuItem>
+  //           <DropdownMenuItem onClick={() => user._id && deleteMember(user._id)}>حذف</DropdownMenuItem> 
+  //         </DropdownMenuContent>
+  //       </DropdownMenu>
+  //     )
+  //   }
+  
 ]
