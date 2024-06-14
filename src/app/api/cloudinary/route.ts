@@ -1,7 +1,9 @@
+
 import cloudinary from '@/lib/cloudinary';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export const handleRequest = async function(req: NextApiRequest, res: NextApiResponse) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
       const fileStr = req.body.data;
