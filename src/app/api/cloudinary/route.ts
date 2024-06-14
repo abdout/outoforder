@@ -1,9 +1,7 @@
-
 import cloudinary from '@/lib/cloudinary';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default (async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
       const fileStr = req.body.data;
@@ -17,4 +15,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } else {
     res.status(405).json({ error: 'Method not allowed' });
   }
-}
+} as any);
