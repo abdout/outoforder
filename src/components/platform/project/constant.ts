@@ -31,3 +31,26 @@ export type lead = {
       image: "/author/hesham.png"
     },
   ]
+
+  export type status = {
+    value: string
+    label: string
+    image?: string
+  }
+  
+ export const statuses: status[] = [
+    {
+      value: "on progress",
+      label: " جاري",
+      
+    },
+    {
+      value: " stuck",
+      label: "متوقف",
+     
+    },
+    {
+      value: "done",
+      label: "تم",
+    },
+  ]

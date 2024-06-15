@@ -11,7 +11,7 @@ import { useState } from "react";
 import { useUpload } from "@/components/upload/context";
 import { Icon } from "@iconify/react";
 import SelectPopover from "@/components/atom/popover";
-import { lead, leads } from "./constant";
+import { lead, leads, statuses } from "./constant";
 
 interface FormData {
   title: string;
@@ -38,6 +38,7 @@ const CreateProject: React.FC<CreateProps> = ({ onClose }) => {
   const { image } = useUpload();
   const [step, setStep] = useState(1);
   const [selectedLead, setSelectedLead] = useState<lead | null>(null);
+  const [stauts, setStauts] = useState<lead | null>(null);
 
   const nextStep = () => { setStep(prevStep => prevStep < 2 ? prevStep + 1 : 2) };
   const prevStep = () => { setStep(prevStep => prevStep > 1 ? prevStep - 1 : 1) };
@@ -73,7 +74,7 @@ const CreateProject: React.FC<CreateProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="flex items-top h-screen">
+    <div className="flex items-top h-screen w-5/6">
       <Form  {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
@@ -108,41 +109,23 @@ const CreateProject: React.FC<CreateProps> = ({ onClose }) => {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="lead"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input className="h-14" placeholder="الوصف" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              
               <SelectPopover
                 items={leads}
                 selectedItem={selectedLead}
                 setSelectedItem={setSelectedLead}
-                label="+ اختر امانة"
+                label="+ الامانة"
               />
-              <FormField
-                control={form.control}
-                name="status"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input className="h-14" placeholder="الوصف" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
+              <SelectPopover
+                items={statuses}
+                selectedItem={stauts}
+                setSelectedItem={setStauts}
+                label="+ الحالة"
               />
-
-              {/* <ImageUpload /> */}
+              
               <Button
                 type="submit"
-                className="mt-6 font-medium text-lg">
+                className="mt-6 h-12 font-medium text-lg">
                 انشاء مشروع
               </Button>
             </div>

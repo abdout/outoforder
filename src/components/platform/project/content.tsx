@@ -28,8 +28,11 @@ const ProjectContent: React.FC = () => {
 
 
     return (
-        <>
-        <h4>the most magical part of harry portter book is that the ev</h4>
+        <div className="pt-10">
+            {/* <p className="text-lg tracking-wide font-light w-screen justify-center items-center  flex " dir="ltr">
+                The most magical part of the Harry Potter books, is that they eventually
+                used the skills they learned at school
+            </p> */}
             <div className='grid grid-cols-3 gap-x-80 gap-y-14'>
                 {projects.map((project) => {
                     const updatedAt = new Date(project.updatedAt);
@@ -47,7 +50,7 @@ const ProjectContent: React.FC = () => {
                                     <ProjectCard project={project} />
                                     {contextMenu.projectID === project._id && (
                                         <div
-                                             className="absolute top-0 left-0 w-full h-full flex gap-4 justify-center items-center bg-transparent"
+                                            className="absolute top-0 left-0 w-full h-full flex gap-4 justify-center items-center bg-transparent"
                                             onMouseLeave={handleCloseContextMenu}
                                         >
                                             <button onClick={() => project._id && deleteProject(project._id)}><Icon icon="ant-design:delete-filled" width={40} /></button>
@@ -57,17 +60,17 @@ const ProjectContent: React.FC = () => {
                                                 <Icon icon="icon-park-solid:edit" width={40} />
                                             </button>
                                         </div>
-                                    )} 
+                                    )}
                                 </div>
                             </Link>
-                        
+
                         </div>
                     );
                 })}
                 <ProjectDialog />
             </div>
 
-        </>
+        </div>
     );
 };
 
