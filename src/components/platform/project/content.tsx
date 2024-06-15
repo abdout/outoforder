@@ -45,7 +45,7 @@ const ProjectContent: React.FC = () => {
                                 }
                             }}
                         >
-                            <Link href={`/project/${project._id}`}>
+                            {/* <Link href={`/project/${project._id}`}> */}
                                 <div className={`relative flex items-center justify-center w-60 ${contextMenu.projectID === project._id ? 'opacity-80' : ''}`}>
                                     <ProjectCard project={project} />
                                     {contextMenu.projectID === project._id && (
@@ -62,7 +62,7 @@ const ProjectContent: React.FC = () => {
                                         </div>
                                     )}
                                 </div>
-                            </Link>
+                            {/* </Link> */}
 
                         </div>
                     );
