@@ -53,7 +53,7 @@ const ArticleContent: React.FC = () => {
                                 </div>
                             </Link>
 
-                           
+
                             <div className="w-1/6">
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>
