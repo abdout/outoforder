@@ -8,7 +8,7 @@ To get started contributing to NMBD, follow these steps:
 
 ### Documentation 
 
-To start with ease, you may browse the [Technical Record Document](https://github.com/abdout/auth/blob/main/TRD.md).  
+To start with ease, you may browse the [Technical Record Document](https://github.com/abdout/nmbd/blob/main/TRD.md).  
 
 
 
@@ -17,13 +17,13 @@ To start with ease, you may browse the [Technical Record Document](https://githu
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/abdout/auth.git
+    git clone https://github.com/abdout/nmbd.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd auth
+    cd nmbd
     ```
 
 3. Install dependencies:
@@ -70,5 +70,5 @@ We welcome contributions from the community! To contribute to Auth, please follo
 
 ## Support
 
-If you have any questions or need assistance, feel free to [open an issue](https://github.com/abdout/auth/issues) in the repository, or reach out to us on [Discord](https://discord.com/invite/uPa4gGG62c).
+If you have any questions or need assistance, feel free to [open an issue](https://github.com/abdout/nmbd/issues) in the repository, or reach out to us on [Discord](https://discord.com/invite/uPa4gGG62c).
 
