@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Auth
+
+Welcome to the NMBD repository! This repository is owned by National Movement For Building and Development, where its website and its internal tools maintened! 
 
 ## Getting Started
 
-First, run the development server:
+To get started contributing to NMBD, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Documentation 
+
+To start with ease, you may browse the [Technical Record Document](https://github.com/abdout/auth/blob/main/TRD.md).  
+
+
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/abdout/auth.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd auth
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+4. Setup .env file
+
+
+```js
+MONOGDB_URI=
+DIRECT_URL=
+AUTH_SECRET=
+RESEND_API_KEY=
+NEXT_PUBLIC_APP_URL=
+DOMAIN=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Setup Prisma
+```shell
+npx prisma generate
+npx prisma db push
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+6. Run the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    npm run dev
+    ```
 
-## Learn More
+- Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the components.
 
-To learn more about Next.js, take a look at the following resources:
+### Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We welcome contributions from the community! To contribute to Auth, please follow these guidelines:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Fork the repository
+2. create a new branch for your feature or bug fix.
+3. Ensure your code adheres to coding standards in TRD.
+4. Test your changes locally.
+5. Commit your changes and push them to your fork.
+6. Open a pull request, describing the changes you've made and why they should be merged.
 
-## Deploy on Vercel
+## Support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you have any questions or need assistance, feel free to [open an issue](https://github.com/abdout/auth/issues) in the repository, or reach out to us on [Discord](https://discord.com/invite/uPa4gGG62c).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
