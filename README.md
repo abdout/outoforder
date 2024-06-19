@@ -1,6 +1,6 @@
-# Auth
+# NMBD
 
-Welcome to the NMBD repository! This repository is owned by National Movement For Building and Development, where its website and its internal tools maintened! 
+Welcome to the NMBD repository! This repository is owned by the National Movement for Building and Development, where its website and internal tools are maintained.
 
 ## Getting Started
 

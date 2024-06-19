@@ -2,7 +2,7 @@
 **Welcome to**    
 **NMBD's Technical Record Document (TRD)** 
 
-The **Objective** of Auth, is to build authentication and authorization for [Databayt](https://github.com/abdout/databayt).  
+The **Objective** of NMBD, to automate and streamline business operations within the realm of National Movement for Building and Development 
 
 **Table of Contents**
 1. [Introduction](#introduction)
