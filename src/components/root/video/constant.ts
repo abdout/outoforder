@@ -7,7 +7,7 @@ export const media = [
     date: "18 ابريل 2024",
     videoId: "ybE4VaA5pqg",
     description: "التدابير السياسية وحدها لا تكفي ليخرج السودان من هذه الحفرة،\nولكن السودان يحتاج ايضا إلى إصلاح ثقافي",
-    authorImage: "/home/media/hesham.png",
+    authorImage: "/author/hesham.png",
     
   },
   {
@@ -18,7 +18,7 @@ export const media = [
     date: "14 ابريل 2024",
     videoId: "mlgqdU_O6Ek",
     description: " القبيلة والجهة مخزن قسم كريمة ومساحة تربية فاضلة, يحثان على التراحم والتعارف بين الناس",
-    authorImage: ""
+    authorImage: "/author/almgdad.png",
   },
   {
     lineone: "الرؤية الاقتصادية",
@@ -28,6 +28,6 @@ export const media = [
     date: "14 ابريل 2024",
     videoId: "yjSIrCLQL9U",
     description: "في السودان، يوجد قيمة التضامن ولكن بدلاً من التضامن في الاستهلاك فقط، دعونا نتضامن في الإنتاج أيضًا",
-    authorImage: "/home/media/gasm.png"
+    authorImage: "/author/gasm.png"
   },
 ];

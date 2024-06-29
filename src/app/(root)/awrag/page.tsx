@@ -1,8 +1,11 @@
+import Paper from '@/components/root/paper/paper'
 import React from 'react'
 
 const Awrag = () => {
   return (
-    <div>Awrag</div>
+    <div>
+      <Paper />
+    </div>
   )
 }
 

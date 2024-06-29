@@ -148,7 +148,7 @@ const Create: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen registration-page">
-            <div className='felx pl-[35rem] pb-4 flex-col items-start justify-start gap-2 mt-4'>
+            <div className='felx pl-[35rem] pb-4 flex-col items-start justify-start gap-2 mt-8'>
                 <h1>حبابك عشرة</h1>
                 <p className='text-xl font-light'>سيكون لنا متسع من الموت للنوم</p>
             </div>
@@ -385,7 +385,7 @@ const Create: React.FC = () => {
                     )}
                     <Button
                         type="submit"
-                        className="font-medium text-lg absolute bottom-[44px] left-1/2 transform -translate-x-1/2 text-green-700 bg-transparent hover:bg-transparent z-50 px-28">
+                        className="font-medium text-lg absolute bottom-[44px] left-1/2 transform -translate-x-1/2 text-yellow-400 bg-transparent hover:bg-transparent z-50 px-28">
                         طلب العضوية
                     </Button>
                     <Progress value={progress} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 h-12 w-80"

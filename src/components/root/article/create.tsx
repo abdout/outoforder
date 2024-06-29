@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Editor from '@/components/editor/ui';
 import ImageUpload from '@/components/upload/image';
-import Author from './author';
 import { useArticle } from "./context";
 import { useState } from "react";
 import { useUpload } from "@/components/upload/context";

@@ -26,7 +26,7 @@
 
   @layer base {
     :root {
-      --background: 0 0% 100%;
+      --background: 252 0% 99%;
       --foreground: 224 71.4% 4.1%;
 
       --card: 0 0% 100%;
@@ -193,5 +193,120 @@
   .reveal-less:hover {
     opacity: 1;
   }
+@layer components {
+  .border-animation {
+    position: relative;
+    overflow: hidden;
+  }
 
- 
+  /* Adjusted Initial State for Horizontal Borders */
+  .group .border-animation::before,
+  .group .border-animation::after {
+    content: '';
+    position: absolute;
+    height: 2px; /* Height of the border */
+    background: black; /* Color of the border */
+    width: 0;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .group .border-animation::before {
+    top: 0;
+    left: 0;
+  }
+
+  .group .border-animation::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Adjusted Initial State for Vertical Borders */
+  .group .border-animation span::before,
+  .group .border-animation span::after {
+    content: '';
+    position: absolute;
+    width: 2px; /* Width of the border */
+    background: black; /* Color of the border */
+    height: 0;
+    transition: height 0.5s ease-in-out;
+  }
+
+  .group .border-animation span::before {
+    top: 0;
+    left: 0;
+  }
+
+  .group .border-animation span::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Adjusted Hover Effects */
+  .group:hover .border-animation::before {
+    width: 10%;
+    left: 0; /* Expand from the top-left corner to the right */
+  }
+
+  .group:hover .border-animation::after {
+    width: 10%;
+    right: 0; /* Expand from the bottom-right corner to the left */
+  }
+  .group:hover .border-animation::before {
+    width: 10%;
+    top: 0; /* Expand from the top-left corner to the right */
+  }
+
+  .group:hover .border-animation::after {
+    width: 10%;
+    bottom: 0; /* Expand from the bottom-right corner to the left */
+  }
+
+  .group:hover .border-animation span::before {
+    height: 10%;
+    top: 0; /* Expand from the top-left corner downwards */
+  }
+
+  .group:hover .border-animation span::after {
+    height: 10%;
+    left: 0; /* Expand from the bottom-right corner upwards */
+  }
+  .group:hover .border-animation span::before {
+    height: 10%;
+    top: 0; /* Expand from the top-left corner downwards */
+  }
+
+  .group:hover .border-animation span::after {
+    height: 10%;
+    right: 0; /* Expand from the bottom-right corner upwards */
+  }
+}
+
+@keyframes letter-animation {
+  0% { opacity: 1; }
+  10% { opacity: 0.95; }
+  20% { opacity: 0.9; }
+  30% { opacity: 0.85; }
+  40% { opacity: 0.8; }
+  50% { opacity: 0.75; }
+  60% { opacity: 0.8; }
+  70% { opacity: 0.85; }
+  80% { opacity: 0.9; }
+  90% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.word-animation span {
+  animation: letter-animation 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.word-animation span:nth-child(1) { --i: 1; }
+.word-animation span:nth-child(2) { --i: 2; }
+.word-animation span:nth-child(3) { --i: 3; }
+.word-animation span:nth-child(4) { --i: 4; }
+.word-animation span:nth-child(5) { --i: 5; }
+.word-animation span:nth-child(6) { --i: 6; }
+
+.rubik {
+  font-family: var(--rubik);
+}

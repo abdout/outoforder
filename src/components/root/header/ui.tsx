@@ -9,6 +9,7 @@ import { header } from "./constant";
 import Toggle from "@/components/theme/toggle";
 import Link from "next/link";
 import MobileHeader from "@/components/root/header/mobile";
+import { UserButton } from "@/components/auth/user-button";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -44,6 +45,9 @@ const Header = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-5 hidden group-hover:block p-2">ثيم</div>
             </div>
           </li>
+          <li className="opacity-50 hover:opacity-100 pt-1">
+          <UserButton /> 
+        </li>
           <li className="opacity-50 hover:opacity-100 z-50">
             <div className="text-lg group relative flex justify-center -mt-[6px]">
               <Hamburger size={23} distance="lg" toggled={open} toggle={setOpen} />

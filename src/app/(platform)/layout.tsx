@@ -1,27 +1,15 @@
-'use client';
-// import type { Metadata } from "next";
+"use client";
 import { Rubik } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/platform/header/ui";
 import { MemberProvider } from "@/components/platform/member/context";
 import { UploadProvider } from "@/components/upload/context";
 import { ProjectProvider } from "@/components/platform/project/context";
-import Task from "./task/page";
 import { TaskProvider } from "@/components/platform/task/context";
-
-
 
 const rubik = Rubik({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: "الحركة الوطنية",
-//   description: "الحركة الوطنية للبناء والتنمية - المجتمع اولا",
-// };
-
-
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-
+export default function PlatformLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={rubik.className} dir="rtl">
@@ -43,4 +31,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

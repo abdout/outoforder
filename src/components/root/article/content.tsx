@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from 'next/link';
 import { useArticle } from "./context";
 import { domain } from "@/lib/domain";
-
 import { DialogDemo } from "./dailog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal } from "lucide-react";
+import { useSession } from "next-auth/react";
 
 const ArticleContent: React.FC = () => {
     const { refreshArticles, articles, deleteArticle } = useArticle();
+    const { data: session, status } = useSession();
 
     useEffect(() => {
         refreshArticles();
@@ -20,10 +21,12 @@ const ArticleContent: React.FC = () => {
 
     return (
         <>
-            <DialogDemo />
+            {status === "authenticated" && (
+                <DialogDemo />
+            )}
             <div className="flex justify-start">
             </div>
-            <div className="flex flex-col gap-12 pt-6 space-y-10" dir="rtl">
+            <div className="flex flex-col pt-6 space-y-10" dir="rtl">
                 {articles.map((article) => {
                     const updatedAt = new Date(article.updatedAt);
                     const formattedDate = `${updatedAt.getDate()}/${updatedAt.getMonth() + 1}/${updatedAt.getFullYear()}`;
@@ -52,41 +55,39 @@ const ArticleContent: React.FC = () => {
                                     </div>
                                 </div>
                             </Link>
-
-
                             <div className="w-1/6">
-                                <DropdownMenu>
-                                    <DropdownMenuTrigger asChild>
-                                        <Button variant='ghost' className='h-8 w-8 p-0'>
-                                            <span className='sr-only'>Open menu</span>
-                                            <MoreHorizontal className='h-4 w-4' />
-                                        </Button>
-                                    </DropdownMenuTrigger>
-                                    <DropdownMenuContent align='end'>
-                                        <DropdownMenuLabel>الضبط</DropdownMenuLabel>
-                                        <DropdownMenuSeparator />
-                                        <DropdownMenuItem
-                                            onClick={() => {
-                                                if (article._id) {
-                                                    navigator.clipboard.writeText(article._id);
-                                                }
-                                            }}
-                                        >
-                                            نسخ
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                            <Link href={`/article/${article._id}`}>
-                                                ملف
-                                            </Link>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>تجميد</DropdownMenuItem>
-                                        <DropdownMenuItem onClick={() => article._id && deleteArticle(article._id)}>حذف</DropdownMenuItem>
-                                    </DropdownMenuContent>
-                                </DropdownMenu>
-
+                                {status === "authenticated" && (
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button variant='ghost' className='h-8 w-8 p-0'>
+                                                <span className='sr-only'>Open menu</span>
+                                                <MoreHorizontal className='h-4 w-4' />
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent align='end'>
+                                            <DropdownMenuLabel>الضبط</DropdownMenuLabel>
+                                            <DropdownMenuSeparator />
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    if (article._id) {
+                                                        navigator.clipboard.writeText(article._id);
+                                                    }
+                                                }}
+                                            >
+                                                نسخ
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem>
+                                                <Link href={`/article/${article._id}`}>
+                                                    ملف
+                                                </Link>
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem>تجميد</DropdownMenuItem>
+                                            <DropdownMenuItem onClick={() => article._id && deleteArticle(article._id)}>حذف</DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                )}
                             </div>
                         </div>
-
                     );
                 })}
             </div>

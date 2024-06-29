@@ -1,3 +1,5 @@
+![NMBD Logo](/public/nmbd.png)
+
 # NMBD
 
 Welcome to the NMBD repository! This repository is owned by the National Movement for Building and Development, where its website and internal tools are maintained.

@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import { header } from "./constant";
 import Toggle from "@/components/theme/toggle";
 import Link from "next/link";
+import { UserButton } from "@/components/auth/user-button";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -40,6 +41,9 @@ const Header = () => {
             <Toggle />
             <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-5 hidden group-hover:block p-2">ثيم</div>
           </div>
+        </li>
+        <li className="opacity-50 hover:opacity-100 pt-1">
+          <UserButton /> 
         </li>
       </ul>
     </div>

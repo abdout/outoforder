@@ -13,7 +13,7 @@ const hamburger = [
 
   {
     title: "المنصة",
-    path: "/home",
+    path: "/platform",
     icon: "radix-icons:commit",
     submenu: true,
     submenuItems: [
@@ -33,6 +33,11 @@ const hamburger = [
     title: "الاتصال",
     path: "/",
     icon: "fluent:mail-16-regular",
+  },
+  {
+    title: "المطورين",
+    path: "/contribute",
+    icon: "bi:code",
   },
 ];
 

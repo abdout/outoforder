@@ -1,7 +1,7 @@
 export const header = [
   { 
-    href: "/home", 
-    key: "home", 
+    href: "/platform", 
+    key: "platform", 
     label: "بيت", 
     icon: "fluent:home-48-regular" },
   {

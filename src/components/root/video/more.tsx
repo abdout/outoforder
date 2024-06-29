@@ -6,7 +6,7 @@ import { media } from './constant';
 const More = () => {
   return (
     <div>
-      <h1 className='rubik font-blod text-xl pt-8' dir="rtl"> المزيد</h1>
+      <h5 className='pt-8' dir="rtl"> المزيد</h5>
       <div className="flex flex-col gap-12 pt-6" dir="rtl">
         {media.map((item, index) => (
            <Link href={`/video?videoId=${item.videoId}&index=${index}`} key={index}>
